@@ -30,20 +30,67 @@ class Conversation {
       //split into words then go through words in a loop within the loop
       String[] words = input.split(" ");
 
+      String bot = "";
 
 //Q: should I make an array for computer response with mirror words?
 
       //check for mirror words and replace
       for(int j = 0; j <words.length; j++){
+        
+        
         if(words[j].equals("I")){
-          words[j].replace("I", "you");
-          System.out.print(words[j]);
+          //bot = bot + words[j];
+          bot = bot + "you ";
+
+          //words[j] = words[j].replace("I", "you");
+          //System.out.print(words[j]);
+        }
+        
+        if(words[j].equals("me")){
+          bot = bot + "you ";
+          
+          //words[j] = words[j].replace("me", "you");
+          //System.out.print(words[j]);
         }
 
-        else{
-          System.out.println("Random response.");
+        if(words[j].equals("am")){
+          bot = bot + "are ";
+          
+          //words[j] = words[j].replace("am", "are");
+         // System.out.print(words[j]);
         }
-      
+
+        if(words[j].equals("you")){
+          bot = bot + "I ";
+          
+          //words[j] = words[j].replace("you", "I");
+          //System.out.print(words[j]);
+        }
+
+        if(words[j].equals("my")){
+          bot = bot + "your ";
+          
+          //words[j] = words[j].replace("my", "your");
+          //System.out.print(words[j]);
+        }
+
+        if(words[j].equals("your")){
+          bot = bot + "my ";
+          
+          //words[j] = words[j].replace("your", "my");
+          //System.out.print(words[j]);
+        }
+
+        if(bot.equals("")){
+          System.out.println("RANDOMIZE THIS.");
+        }
+        //if bot still empty at end, do a Random message
+
+        else{
+          bot += words[j]; // bot = bot + words[j]
+          //System.out.println("Random response.");
+        }
+        System.out.println(bot);
       }
 
     
