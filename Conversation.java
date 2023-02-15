@@ -22,11 +22,31 @@ class Conversation {
     // allocate static array of canned responses
     String[] canned_responses = {"Gotcha.", "For sure.", "Tell me more!", "What do you mean?", "Mmhmm..."};
 
-    //loop for user chats
+    //loop for user chats for number of rounds
     for(int i = 0; i < num_rounds; i++){
       Scanner user_input = new Scanner(System.in);
       String input = user_input.nextLine();
-      //if
+
+      //split into words then go through words in a loop within the loop
+      String[] words = input.split(" ");
+
+
+//Q: should I make an array for computer response with mirror words?
+
+      //check for mirror words and replace
+      for(int j = 0; j <words.length; j++){
+        if(words[j].equals("I")){
+          words[j].replace("I", "you");
+          System.out.print(words[j]);
+        }
+
+        else{
+          System.out.println("Random response.");
+        }
+      
+      }
+
+    
 
     }
 
