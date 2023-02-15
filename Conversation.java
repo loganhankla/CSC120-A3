@@ -11,6 +11,26 @@ import java.util.Random;
 class Conversation {
 
   public static void main(String[] arguments) {
-    // You will start the conversation here.
+    Scanner round_scan = new Scanner(System.in);
+    System.out.println("How many chat rounds would you like?");
+    //gets user input for number of chat rounds
+    Short num_rounds = round_scan.nextShort();
+
+    //start conversation
+    System.out.println("Hey friend! What's up?");
+  
+    // allocate static array of canned responses
+    String[] canned_responses = {"Gotcha.", "For sure.", "Tell me more!", "What do you mean?", "Mmhmm..."};
+
+    //loop for user chats
+    for(int i = 0; i < num_rounds; i++){
+      Scanner user_input = new Scanner(System.in);
+      String input = user_input.nextLine();
+      //if
+
+    }
+
+    //creating transcript
+   // String[] transcript = new String[]
   }
 }
