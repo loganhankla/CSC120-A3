@@ -37,6 +37,7 @@ class Conversation {
       //check for mirror words and replace
       for(int j = 0; j <words.length; j++){
         
+        //get rid of original word and repeats
         
         if(words[j].equals("I")){
           //bot = bot + words[j];
