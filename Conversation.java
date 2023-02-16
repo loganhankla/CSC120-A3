@@ -29,8 +29,11 @@ class Conversation {
     transcript[0] = "-----TRANSCRIPT-----";
     transcript[1] = "Hey friend! What's up?";
     
-    //transcript index
+    /**transcript index*/
     int tr_ind = 2;
+    
+    /**computer response index for transcript */
+    int cr_ind = 3;
 
     //loop for user chats for number of rounds
     for(int i = 0; i < num_rounds; i++){
@@ -56,6 +59,10 @@ class Conversation {
         
         else if(words[j].equals("me")){
           bot = bot + "you "; 
+        }
+
+        else if(words[j].equals("I'm")){
+          bot = bot + "you're "; 
         }
 
         else if(words[j].equals("am")){
@@ -86,7 +93,8 @@ class Conversation {
         Random random = new Random();
         int index = random.nextInt(canned_responses.length);
         System.out.println(canned_responses[index]);
-        // transcript[tr_ind] = index;
+        transcript[cr_ind] = canned_responses[index]; //check, goodish for first one
+        cr_ind+=2;
       }
 
       else{System.out.println(bot);}
