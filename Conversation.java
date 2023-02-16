@@ -9,6 +9,7 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
+/**Conversation creates a chatbot that responds to a user with a specified number of rounds. */
 class Conversation {
 
   public static void main(String[] arguments) {
@@ -45,15 +46,11 @@ class Conversation {
       //create empty
       String bot = "";
 
-//Q: should I make an array for computer response with mirror words?
-
       //check for mirror words and replace
       for(int j = 0; j <words.length; j++){
-    
         
         if(words[j].equals("I")){
           bot = bot + "you ";
-
         }
         
         else if(words[j].equals("me")){
@@ -82,27 +79,23 @@ class Conversation {
         else{
           bot += words[j];
           bot += " ";
-          
         }
         
       }
 
-//if bot still empty at end, do a Random message
-if(bot.equals(input + " ")){
-  Random random = new Random();
-  int index = random.nextInt(canned_responses.length);
-  System.out.println(canned_responses[index]);
- // transcript[tr_ind] = index;
-}
+      //if bot still empty at end, do a Random message
+      if(bot.equals(input + " ")){
+        Random random = new Random();
+        int index = random.nextInt(canned_responses.length);
+        System.out.println(canned_responses[index]);
+        // transcript[tr_ind] = index;
+      }
 
-else{System.out.println(bot);}
+      else{System.out.println(bot);}
     
 
     }
     System.out.println(Arrays.toString(transcript));
-    //creating transcript
-   // String[] transcript = new String[]
   }
-
   
 }
