@@ -22,6 +22,9 @@ class Conversation {
     // allocate static array of canned responses
     String[] canned_responses = {"Gotcha.", "For sure.", "Tell me more!", "What do you mean?", "Mmhmm..."};
 
+// array for transcript?
+    String[] transcript = {"TRANSCRIPT:", "Hey friend! What's up?"};
+
     //loop for user chats for number of rounds
     for(int i = 0; i < num_rounds; i++){
       Scanner user_input = new Scanner(System.in);
@@ -84,12 +87,7 @@ class Conversation {
           //System.out.print(words[j]);
         }
 
-        //if bot still empty at end, do a Random message
-        else if(bot.equals("")){
-          Random random = new Random();
-          int index = random.nextInt(canned_responses.length);
-          System.out.println(canned_responses[index]);
-        }
+    
         //BUG: it does this for every word.
 
         else{
@@ -101,12 +99,28 @@ class Conversation {
         }
         //System.out.println(bot);
       }
-      System.out.println(bot);
+//if bot still empty at end, do a Random message
+
+if(bot.equals(input + " ")){
+  Random random = new Random();
+  int index = random.nextInt(canned_responses.length);
+  System.out.println(canned_responses[index]);
+}
+
+else{System.out.println(bot);}
+
+
+
+
+
+    
     
 
     }
-
+    System.out.println(transcript);
     //creating transcript
    // String[] transcript = new String[]
   }
+
+  
 }
