@@ -30,14 +30,16 @@ class Conversation {
       //split into words then go through words in a loop within the loop
       String[] words = input.split(" ");
 
+      //create empty
       String bot = "";
 
 //Q: should I make an array for computer response with mirror words?
 
       //check for mirror words and replace
       for(int j = 0; j <words.length; j++){
-        
+    
         //get rid of original word and repeats
+        // get spaces in computer response
         
         if(words[j].equals("I")){
           //bot = bot + words[j];
@@ -47,53 +49,56 @@ class Conversation {
           //System.out.print(words[j]);
         }
         
-        if(words[j].equals("me")){
+        else if(words[j].equals("me")){
           bot = bot + "you ";
           
           //words[j] = words[j].replace("me", "you");
           //System.out.print(words[j]);
         }
 
-        if(words[j].equals("am")){
+        else if(words[j].equals("am")){
           bot = bot + "are ";
           
           //words[j] = words[j].replace("am", "are");
          // System.out.print(words[j]);
         }
 
-        if(words[j].equals("you")){
+        else if(words[j].equals("you")){
           bot = bot + "I ";
           
           //words[j] = words[j].replace("you", "I");
           //System.out.print(words[j]);
         }
 
-        if(words[j].equals("my")){
+        else if(words[j].equals("my")){
           bot = bot + "your ";
           
           //words[j] = words[j].replace("my", "your");
           //System.out.print(words[j]);
         }
 
-        if(words[j].equals("your")){
+        else if(words[j].equals("your")){
           bot = bot + "my ";
           
           //words[j] = words[j].replace("your", "my");
           //System.out.print(words[j]);
         }
 
-        if(bot.equals("")){
+        //if bot still empty at end, do a Random message
+        else if(bot.equals("")){
           System.out.println("RANDOMIZE THIS.");
         }
-        //if bot still empty at end, do a Random message
 
         else{
-          bot += words[j]; // bot = bot + words[j]
+          bot += words[j];
+          bot += " ";
+      
+           // bot = bot + words[j]
           //System.out.println("Random response.");
         }
-        System.out.println(bot);
+        //System.out.println(bot);
       }
-
+      System.out.println(bot);
     
 
     }
