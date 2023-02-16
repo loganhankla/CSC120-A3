@@ -86,8 +86,11 @@ class Conversation {
 
         //if bot still empty at end, do a Random message
         else if(bot.equals("")){
-          System.out.println("RANDOMIZE THIS.");
+          Random random = new Random();
+          int index = random.nextInt(canned_responses.length);
+          System.out.println(canned_responses[index]);
         }
+        //BUG: it does this for every word.
 
         else{
           bot += words[j];
