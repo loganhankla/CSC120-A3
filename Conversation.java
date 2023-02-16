@@ -29,7 +29,7 @@ class Conversation {
     transcript[0] = "-----TRANSCRIPT-----";
     transcript[1] = "Hey friend! What's up?";
     
-    /**transcript index*/
+    /**transcript index for user input*/
     int tr_ind = 2;
     
     /**computer response index for transcript */
@@ -97,7 +97,10 @@ class Conversation {
         cr_ind+=2;
       }
 
-      else{System.out.println(bot);}
+      else{System.out.println(bot);
+        transcript[cr_ind] = bot; //check, goodish for first one
+        cr_ind+=2;
+      }
     
 
     }
