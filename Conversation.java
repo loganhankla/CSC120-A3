@@ -38,12 +38,13 @@ class Conversation {
       String input = user_input.nextLine();
       transcript[tr_ind] = input;
       //System.out.print(transcript[tr_ind]);
-      tr_ind++;
+      //tr_ind++;
+      tr_ind+=2;
 
       //split into words then go through words in a loop within the loop
       String[] words = input.split(" ");
 
-      //create empty
+      //create empty string for computer response
       String bot = "";
 
       //check for mirror words and replace
@@ -54,8 +55,7 @@ class Conversation {
         }
         
         else if(words[j].equals("me")){
-          bot = bot + "you ";
-          
+          bot = bot + "you "; 
         }
 
         else if(words[j].equals("am")){
@@ -68,12 +68,10 @@ class Conversation {
 
         else if(words[j].equals("my")){
           bot = bot + "your ";
-       
         }
 
         else if(words[j].equals("your")){
           bot = bot + "my ";
-          
         }
 
         else{
