@@ -50,13 +50,10 @@ class Conversation {
       //check for mirror words and replace
       for(int j = 0; j <words.length; j++){
     
-        //get rid of original word and repeats
         
         if(words[j].equals("I")){
-          //bot = bot + words[j];
           bot = bot + "you ";
 
-        
         }
         
         else if(words[j].equals("me")){
@@ -66,12 +63,10 @@ class Conversation {
 
         else if(words[j].equals("am")){
           bot = bot + "are ";
-          
         }
 
         else if(words[j].equals("you")){
           bot = bot + "I ";
-          
         }
 
         else if(words[j].equals("my")){
@@ -84,33 +79,23 @@ class Conversation {
           
         }
 
-    
-        //BUG: it does this for every word.
-
         else{
           bot += words[j];
           bot += " ";
-      
-           // bot = bot + words[j]
-          //System.out.println("Random response.");
+          
         }
-        //System.out.println(bot);
+        
       }
-//if bot still empty at end, do a Random message
 
+//if bot still empty at end, do a Random message
 if(bot.equals(input + " ")){
   Random random = new Random();
   int index = random.nextInt(canned_responses.length);
   System.out.println(canned_responses[index]);
+ // transcript[tr_ind] = index;
 }
 
 else{System.out.println(bot);}
-
-
-
-
-
-    
     
 
     }
