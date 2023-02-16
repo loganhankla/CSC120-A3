@@ -65,13 +65,19 @@ class Conversation {
           bot = bot + "you're "; 
         }
 
+        else if(words[j].equals("You're")){
+          bot = bot + "I'm "; 
+        }
+
         else if(words[j].equals("am")){
           bot = bot + "are ";
         }
 
-        else if(words[j].equals("you")){
+        else if(words[j].equals("you") || words[j].equals("you.")){
           bot = bot + "I ";
         }
+
+
 
         else if(words[j].equals("my")){
           bot = bot + "your ";

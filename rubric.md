@@ -32,9 +32,9 @@ ___YES__ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowerca
 
 ___YES__ 1 pt: Makes all appropriate mirror replacements
 
-__PART___ 1 pt: Stores transcript of the conversation in an array
+__YES___ 1 pt: Stores transcript of the conversation in an array
 
-___PART__ 1 pt: Prints transcript when terminating
+___YES__ 1 pt: Prints transcript when terminating
 
 ## Kudos:
 
@@ -48,22 +48,22 @@ ___NO__ (Kudos!) Handles you --> me/I dilemma
 
 ## General Items:
 
-_____ 4 pts: Programs compile without errors or warnings
+___YES__ 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___YES__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      __YES think so___ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      ___YES__ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      __YES___ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      ___YES__ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      __YES___ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed checklist file)
+__YES___ 1 pt: All required files included with submission (including completed checklist file)
 
 ___YES__ 1 pt: `reflection.md` contains your reflection on the assignment

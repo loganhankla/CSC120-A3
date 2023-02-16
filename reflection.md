@@ -3,6 +3,7 @@ Use this file to record your reflection on this assignment.
 - Which classmates did you consult with while working on this assignment?
     Maggie Needham
     Bethany Stephens
+    Dakota
 - Which session(s) of TA / office hours did you attend?
     I attended TA office hours on the nights of 2/14 and 2/15.
 - What are your initial impressions of Java? 
@@ -16,4 +17,4 @@ Use this file to record your reflection on this assignment.
 
     Also start coding soon. Don't wait til the last two days before it's due. I've been doing that and letting it get on the backburner while I do assignments due earlier, and it works, but it'd be less stressful if I started earlier. Even just starting on the very first step, get some code in your file early in the week. Get your brain thinking about it.
 
-
+    Also, one thing I was talking to Dakota about is feeling like we don't actually know how to revert changes. We always hear how great version control and committing changes to Github is, but we don't *actually* know how to revert those changes and use the older versions.
