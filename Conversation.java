@@ -7,6 +7,7 @@
 
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Arrays;
 
 class Conversation {
 
@@ -23,12 +24,20 @@ class Conversation {
     String[] canned_responses = {"Gotcha.", "For sure.", "Tell me more!", "What do you mean?", "Mmhmm..."};
 
 // array for transcript?
-    String[] transcript = {"TRANSCRIPT:", "Hey friend! What's up?"};
+    String[] transcript = new String[num_rounds*2 + 2];
+    transcript[0] = "TRANSCRIPT:";
+    transcript[1] = "Hey friend! What's up?";
+    
+    //transcript index
+    int tr_ind = 2;
 
     //loop for user chats for number of rounds
     for(int i = 0; i < num_rounds; i++){
       Scanner user_input = new Scanner(System.in);
       String input = user_input.nextLine();
+      transcript[tr_ind] = input;
+      //System.out.print(transcript[tr_ind]);
+      tr_ind++;
 
       //split into words then go through words in a loop within the loop
       String[] words = input.split(" ");
@@ -42,49 +51,37 @@ class Conversation {
       for(int j = 0; j <words.length; j++){
     
         //get rid of original word and repeats
-        // get spaces in computer response
         
         if(words[j].equals("I")){
           //bot = bot + words[j];
           bot = bot + "you ";
 
-          //words[j] = words[j].replace("I", "you");
-          //System.out.print(words[j]);
+        
         }
         
         else if(words[j].equals("me")){
           bot = bot + "you ";
           
-          //words[j] = words[j].replace("me", "you");
-          //System.out.print(words[j]);
         }
 
         else if(words[j].equals("am")){
           bot = bot + "are ";
           
-          //words[j] = words[j].replace("am", "are");
-         // System.out.print(words[j]);
         }
 
         else if(words[j].equals("you")){
           bot = bot + "I ";
           
-          //words[j] = words[j].replace("you", "I");
-          //System.out.print(words[j]);
         }
 
         else if(words[j].equals("my")){
           bot = bot + "your ";
-          
-          //words[j] = words[j].replace("my", "your");
-          //System.out.print(words[j]);
+       
         }
 
         else if(words[j].equals("your")){
           bot = bot + "my ";
           
-          //words[j] = words[j].replace("your", "my");
-          //System.out.print(words[j]);
         }
 
     
@@ -117,7 +114,7 @@ else{System.out.println(bot);}
     
 
     }
-    System.out.println(transcript);
+    System.out.println(Arrays.toString(transcript));
     //creating transcript
    // String[] transcript = new String[]
   }
