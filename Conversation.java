@@ -26,7 +26,7 @@ class Conversation {
 
 // array for transcript?
     String[] transcript = new String[num_rounds*2 + 2];
-    transcript[0] = "TRANSCRIPT:";
+    transcript[0] = "-----TRANSCRIPT-----";
     transcript[1] = "Hey friend! What's up?";
     
     //transcript index
@@ -93,7 +93,12 @@ class Conversation {
     
 
     }
-    System.out.println(Arrays.toString(transcript));
+    
+    for(int k = 0; k < transcript.length; k++){
+      System.out.println(transcript[k]);
+    }
+
+    //System.out.println(Arrays.toString(transcript));
   }
   
 }
